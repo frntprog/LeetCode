@@ -4,9 +4,7 @@
  */
 var plusOne = function (digits) {
   const sum = digits.reduce((acc, curr) => (acc += curr), "");
-  console.log("sum", BigInt(sum));
   const res = BigInt(sum) + 1n + "";
-  console.log("res", res);
   return res.split("").map((el) => (typeof +el == "number" ? +el : null));
 };
 
